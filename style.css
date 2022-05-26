@@ -1,0 +1,56 @@
+body {
+    margin: 0px;
+    pad: 0px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.main {
+    padding: 10px;
+}
+
+.main_h2 {
+    padding: 5px;
+}
+
+.main_article {
+    background-color: rgb(200,200,200);
+    border-radius: 10px;
+    padding: 5px;
+}
+.main_article_menu {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+.main_article_menu_p { 
+    background-color: rgb(178,178,178);
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+}
+.main_article_aside {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.main_article_aside_card {
+    width: 22%;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(150,150,150);
+    margin-top: 5px;
+}
