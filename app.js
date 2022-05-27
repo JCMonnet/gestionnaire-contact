@@ -40,17 +40,50 @@ function afficheContact() {
         div.innerHTML += `<p class="corbeille" id=${index}>&#9851;</p>`
         aside.appendChild(div);
     })
-    suppressionContact();
+    ecouteurEvent();
 }
 
-function suppressionContact() {
+/**
+ * fonction ecouteur evenements
+ * @type {function}
+ */
+function ecouteurEvent() {
     let corbeilles = document.querySelectorAll('.corbeille');
     corbeilles.forEach((corbeille) => {
         corbeille.addEventListener('click', function (evenement) {
-            contacts.splice(evenement.target.id, 1);
-            afficheContact();
+            suppressionContact(evenement.target.id)
         });
     });
+    let btnAjout = document.querySelector('.main_article_menu_p');
+    btnAjout.addEventListener('click', function () {
+        ajoutContact()
+    });
+}
+
+/**
+ * fonction supprimer un contact
+ * @param {number} id nom du contact
+ * @type {function}
+ */
+function suppressionContact(id) {
+    contacts.splice(id, 1);
+    afficheContact();
+}
+
+function ajoutContact() {
+    let champsSaisis = document.querySelectorAll('.main_article_menu_input');
+        let nom = '';
+        let prenom = '';
+        champsSaisis.forEach((champSaisi) => {
+            if (champSaisi.id === 'nom') {
+                nom = champSaisi.value;
+            } else if (champSaisi.id === 'prenom') {
+                prenom = champSaisi.value;
+            }
+            champSaisi.value = '';
+        });
+        nom && prenom ? (contacts = [...contacts, creerContact(prenom, nom)]) : '';
+        afficheContact();
 }
 afficheContact();
 

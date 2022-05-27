@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     pad: 0px;
+    background-color: black;
 }
 
 .header {
@@ -8,19 +9,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .h1 {
     font-size: 2rem;
     font-weight: bold;
+    color: white;
 }
 
 .main {
     padding: 10px;
+    
 }
 
 .main_h2 {
     padding: 5px;
+    color: white;
 }
 
 .main_article {
@@ -32,20 +37,31 @@ body {
     background-color: white;
     border-radius: 10px;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    
+}
+.main_article_menu_input {
+margin-left: 0.5%;
+margin-right: 0.5%;
+box-shadow: 2px 2px black;
 }
 .main_article_menu_p { 
     background-color: rgb(178,178,178);
     border-radius: 10px;
-    border: 1px solid black;
+    border: 2px solid orange;
     padding: 5px;
     width: 200px;
     text-align: center;
+    cursor: pointer;
+    
 }
 .main_article_aside {
     display: flex;
     justify-content:space-between;
     align-items: center;
     flex-flow: row wrap;
+    
 }
 .main_article_aside_card {
     width: 22%;
@@ -56,9 +72,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.5em;
 }
 
 .corbeille {
+    cursor: pointer;
     width: 32px;
     height: 32px;
     background-color: white;
