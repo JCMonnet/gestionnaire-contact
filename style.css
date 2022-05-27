@@ -1,7 +1,8 @@
 body {
     margin: 0px;
     pad: 0px;
-    background-color: black;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(40,39,42,0.2049194677871149) 35%, rgba(40,39,42,1) 100%);
 }
 
 .header {
@@ -9,13 +10,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
 }
 
-.h1 {
-    font-size: 2rem;
+.header_h1 {
+    font-size: 3em;
     font-weight: bold;
-    color: white;
+    color: black;
 }
 
 .main {
@@ -26,6 +26,9 @@ body {
 .main_h2 {
     padding: 5px;
     color: white;
+}
+.fa-address-book {
+    color: orange;
 }
 
 .main_article {
